@@ -1,0 +1,8 @@
+└─$ cat /etc/snort/rules/local.rules
+# $Id: local.rules,v 1.11 2004/07/23 20:15:44 bmc Exp $
+# ----------------
+# LOCAL RULES
+# ----------------
+# This file intentionally does not come with signatures.  Put your local
+# additions here.
+alert icmp any any -> any any (msg:"ICMP Ping Detected"; sid:1000001; rev:1;)
