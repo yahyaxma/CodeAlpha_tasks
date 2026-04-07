@@ -22,3 +22,9 @@ Figure: Snort 3 capturing and alerting on live ICMP traffic.
 2. Custom Ruleset
 ![Local Rules](Screenshots/local_rules.png)
 Figure: Custom rule signature used for traffic detection.
+
+Troubleshooting & Challenges
+- Challenge: Initial configuration using the `.conf` format failed.
+- Solution: Identified that Snort 3 utilizes a Lua-based configuration (`snort.lua`) and adjusted the syntax accordingly.
+- Challenge: Alerts were not appearing in the console during the initial ping test.
+- Solution: Switched to a "Catch-All" rule signature (`any any -> any any`) and utilized the `-A alert_fast` flag to force real-time terminal output.
